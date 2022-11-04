@@ -34,6 +34,20 @@ header {
     background-color: #20435C;
 }
 
+.primary-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    column-gap: 40px;
+}
+
+.primary-nav .active {
+    background-color: #8F65FF;
+    color: #00137D;
+}
+
+
 footer {
     background-color: #20435C;
 }
@@ -43,7 +57,6 @@ footer {
 .button {
     padding: 15px 30px;
     display: inline-block;
-    border-radius: 50px;
     font-weight: bold;
     font-size: 20px;
     transition: .5s;
