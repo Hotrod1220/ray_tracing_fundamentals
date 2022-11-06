@@ -27,11 +27,23 @@ img {
 }
 
 .wrapper {
-    padding: 40px;
+    padding: 80px 50px;
 }
 
 header {
     background-color: #20435C;
+}
+
+header .wrapper {
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.logo {
+    max-width: 400px;
 }
 
 .primary-nav ul {
@@ -42,9 +54,14 @@ header {
     column-gap: 40px;
 }
 
+.primary-nav ul li a {
+    font-size: 35px;
+    font-family: 'Overpass', sans-serif;
+}
+
 .primary-nav .active {
-    background-color: #8F65FF;
-    color: #00137D;
+    color: #8F65FF;
+    text-decoration: underline;
 }
 
 
