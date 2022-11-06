@@ -27,12 +27,16 @@
     </header>
     <section>
         <div class="container wrapper">
-            <h1>Ray Tracing Fundamentals</h1>
-            <p>
-                Ray Tracing Fundamentals encompasses the amazing technological advancement
-                of ray tracing. Displaying the astonishing difference it offers for applications
-                and analyzing the basics of the physics and mathematical calculations used.
-            </p>
+            <div class="title-parent-grid">
+                <!--Do not like how this grid looks, need to 
+                    figure out when I have interact, or image-->
+                <h1>Ray Tracing Fundamentals</h1>
+                <p>
+                    Ray Tracing Fundamentals encompasses the amazing technological advancement
+                    of ray tracing. Displaying the astonishing difference it offers for applications
+                    and analyzing the basics of the physics and mathematical calculations used.
+                </p>
+            </div>
             <!--If interactive design, it goes here-->
             <!--Need to figure out background, if i want img
                     or if I want maybe a gradient-->
@@ -51,17 +55,25 @@
                 The processing of an image that simulates light refractions, reflections, and shadows.
                 It allows for the creation of a 2-D picture of a 3-D world.
             </p>
-            <img src="images/minecraft_raytr.jpeg" alt="Minecraft Ray Tracing">
-            <img src="images/buspuddle_raytr.jpeg" alt="Battlefield 5 Ray Tracing">
+            <div class="home-img-grid">
+                <img src="images/minecraft_raytr.jpeg" alt="Minecraft Ray Tracing">
+                <img src="images/buspuddle_raytr.jpeg" alt="Battlefield 5 Ray Tracing">
+            </div>
         </div>
     </section>
     <footer>
-        <div class="container wrapper">
+        <div class="container wrapper footer-grid">
             <!--Need to find a way to hide the all the sources in one link, maybe a pop up>-->
-            <p>Sources</p>
-            <p>Contact</p>
-            <p><a href="#backToTop" class="button button-blue">Back to Top</a></p>
-            <p>Creative Commons CC.</p>
+            <div>
+                <ul>
+                    <li><p>Sources</p></li>
+                    <li><p>Contact</p></li>
+                    <li><p>Creative Commons CC.</p></li>  
+                </ul>        
+            </div>
+            <div>
+                <p><a href="#backToTop" class="button button-blue">Back to Top</a></p>
+            </div>
         </div>
     </footer>
 </body>

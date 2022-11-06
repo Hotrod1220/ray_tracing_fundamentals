@@ -64,9 +64,40 @@ header .wrapper {
     text-decoration: underline;
 }
 
+.title-parent-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.home-img-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
 
 footer {
     background-color: #20435C;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5%;
+}
+
+.footer-grid div:nth-child(1)  {
+    text-align: left;
+    list-style-type: none;
+}
+
+.footer-grid div:nth-child(1) ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.footer-grid div:last-child {
+    text-align: center;
 }
 
 /* Buttons */
