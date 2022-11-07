@@ -42,6 +42,12 @@ header .wrapper {
     align-items: center;
 }
 
+.page-title {
+    background-color: #8F65FF;
+    padding: 10px 50px;
+    color: black;
+}
+
 .logo {
     max-width: 400px;
 }
@@ -64,17 +70,24 @@ header .wrapper {
     text-decoration: underline;
 }
 
+/* Grid properties */
+
 .title-parent-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-gap: 20px;
 }
 
-.home-img-grid {
+.two-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 40px;
 }
+
+.video iframe {
+    max-width: 100%;
+}
+
 
 footer {
     background-color: #20435C;
