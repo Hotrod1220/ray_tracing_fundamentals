@@ -10,7 +10,7 @@ body {
     scroll-behavior: smooth;
     margin: 0;
     min-height: 100vh;
-    color: white;
+    color: #D1DDE9;
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     line-height: 1.5em;
@@ -48,7 +48,7 @@ header .wrapper {
 }
 
 .page-title {
-    background-color: #B7D6FF;
+    background-color: #E49334;
     padding: 10px 50px;
     color: #20435C;
 }
@@ -68,10 +68,15 @@ header .wrapper {
 .primary-nav ul li a {
     font-size: 35px;
     font-family: 'Overpass', sans-serif;
+    color: #E49334;
+}
+
+.primary-nav ul li a:hover {
+    color: #FFBF6F;
 }
 
 .primary-nav .active {
-    color: #9FCEFF;
+    color: #FFBF6F;
     text-decoration: underline;
 }
 
@@ -82,27 +87,17 @@ when page shrinks */
     margin: auto;
 }
 
-.light-background {
-    background-color: #9FCEFF;
-    color: black;
-}
-
-.light-background a {
+.orange-background {
+    background-color: #E49334;
     color: #20435C;
-    text-decoration: none;
 }
 
-.light-background a:hover {
-    color: #00137D;
+.orange-background .wrapper {
+    padding: 15px 50px;
 }
 
 .blue-background {
     background-color: #20435C;
-    color: black;
-}
-
-.light-background .wrapper{
-    padding: 15px 50px;
 }
 
 .align-right {
@@ -125,6 +120,7 @@ when page shrinks */
 
 footer {
     background-color: #20435C;
+    color: #E49334;
 }
 
 .footer-grid {
@@ -167,14 +163,14 @@ main {
     transition: .5s;
 }
 
-.button-blue {
-    background-color: #466989;
-    color: #00137D;
+.button-orange {
+    background-color: #E49334;
+    color: #20435C;
 }
 
-.button-blue:hover {
-    background-color: #9FCEFF;
-    color: #00137D;
+.button-orange:hover {
+    background-color: #FFBF6F;
+    color: #20435C;
 }
 
 
@@ -199,12 +195,12 @@ h3 {
 }
 
 a {
-    color: #466989;
+    color: #FFBF6F;
     text-decoration: none;
 }
 
 a:hover {
-    color: #9FCEFF;
+    color: #E49334;
 }
 
 .caption {
