@@ -27,7 +27,7 @@ img {
 }
 
 .wrapper {
-    padding: 80px 50px;
+    padding: 40px 50px;
 }
 
 header {
@@ -70,6 +70,36 @@ header .wrapper {
     text-decoration: underline;
 }
 
+/* How to make the video shrink vertically
+when page shrinks */
+.video iframe {
+    max-width: 100%;
+    margin: auto;
+}
+
+.purple-background {
+    background-color: #8F65FF;
+    color: black;
+}
+
+.purple-background a {
+    color: #20435C;
+    text-decoration: none;
+}
+
+.purple-background a:hover {
+    color: #00137D;
+}
+
+.blue-background {
+    background-color: #20435C;
+    color: black;
+}
+
+.align-center {
+    text-align: center;
+}
+
 /* Grid properties */
 
 .title-parent-grid {
@@ -83,11 +113,6 @@ header .wrapper {
     grid-template-columns: 1fr 1fr;
     grid-gap: 40px;
 }
-
-.video iframe {
-    max-width: 100%;
-}
-
 
 footer {
     background-color: #20435C;
