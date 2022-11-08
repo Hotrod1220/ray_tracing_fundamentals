@@ -329,3 +329,13 @@ a:hover {
     padding: 0px 50px;
     margin-bottom: 0px;
 }
+
+@media screen and (max-width: 1000px) {
+    .two-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .middle-grid {
+        grid-template-columns: 1fr;
+    }
+}
