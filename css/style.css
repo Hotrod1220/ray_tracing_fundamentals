@@ -80,6 +80,21 @@ header .wrapper {
     text-decoration: underline;
 }
 
+.analysis-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 40px;
+}
+
+.analysis-nav ul li a {
+    font-size: 35px;
+    font-family: 'Overpass', sans-serif;
+    color: #E49334;
+}
+
 /* How to make the video shrink vertically
 when page shrinks */
 .video iframe {

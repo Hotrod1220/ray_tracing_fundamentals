@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ray Tracing Fundamentals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600&family=Quicksand:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="stick-footer">
+        <header>
+            <div id="backToTop" class="container wrapper">
+                <!--figure out link to home page-->
+                <img src="images/logo.svg" alt="Ray Tracing Fundamentals Logo" class="logo">
+                <nav class="primary-nav">
+                    <ul>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="analysis.html" class="active">Anaylsis</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <header class="page-title">
+            <div class="container wrapper">
+                <h1>Analysis</h1>
+            </div>
+        </header>
+        <main>
+            <div class="blue-background">
+                <div class="container wrapper">
+                    <nav class="analysis-nav">
+                        <ul>
+                            <li><a href="#raylines">Raylines</a></li>
+                            <li><a href="#intersection">Intersection</a></li>
+                            <li><a href="#refl/refr">Reflection</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <section>
+                <h2 id="raylines">Ray Lines</h2>
+                <img src="images/diagrams/vector.png" alt="Vector Equations of a Line">
+                <p class="caption">
+                    Diagram from <a href="https://www.cuemath.com/algebra/vector-equation/">Cuemath</a>.
+                </p>
+                <p>
+                    The vector representation of a line can be:
+                </p>
+                <p>
+                    \(λ \bar m\) + \(\bar s\) or \(λ \bar b\) + \(\bar a\)
+                </p>
+                <p>
+                    where \(\bar b\), \(\bar m\) and \(\bar a\), \(\bar s\) are commonly used interchangeably. <br>
+                    Where \(\bar s\) is the origin point of the ray, and \(\bar m\) is the angle of the ray.
+                    The \(λ\) parameter specifies the distances along the line. <br><br>
+                    Finding the origin of the ray, \(\bar s\), can be any light source chosen, or often used is the
+                    camera position.<br><br>
+                    The line's angle \(\bar m\) is the ratio of how each coordinate changes from different points on the
+                    line.<br><br>
+                    Manipulating some incredible formulas that can be found <a
+                        href="https://blog.scottlogic.com/2020/03/10/raytracer-how-to.html">here</a>.
+                    The equation for \(\bar m\) becomes:
+                </p>
+                <p>
+                    Equation
+                    <br><br>
+                    Now that both \(\bar m\) and \(\bar s\) have been found, any coordinates on the line can be
+                    calculated.
+                </p>
+            </section>
+            <h2 id="intersection">Intersection</h2>
+            <p>
+                Now that coordinates on the ray lines can be found, we can find the intersection,
+                \(\bar i\), of a ray \(\bar r\) = \(λ \bar m\) + \(\bar s\) with a plane \(\bar p\) = {\(a, b, c, k\)}.
+                For
+                <a href="https://blog.scottlogic.com/2020/03/10/raytracer-how-to.html">more information</a> on planes,
+                and creating objects with planes.
+            </p>
+            <img src="images/diagrams/intersection.png" alt="Intersection of a ray line">
+            <p class="caption">
+                Diagram from <a href="https://blog.scottlogic.com/2020/03/10/raytracer-how-to.html">Scott Logic</a>.
+            </p>
+            <p>
+                Since \(\bar i\) is on both \(\bar r\) and \(\bar p\). It can be substituted directly into both
+                equations. This becomes
+            </p>
+            <p>
+                Equation
+                Equation
+            </p>
+            <p>
+                Combining the two equations above and isolating for \(λ\),
+                fascinating examples and steps shown <a
+                    href="https://blog.scottlogic.com/2020/03/10/raytracer-how-to.html">here</a>
+            </p>
+            <p>
+                EQUATION
+            </p>
+            <p>
+                \(λ\) can now be substituted into the original equation \(\bar i\) = \(λ \bar p\) + \(\bar s\) to
+                calculate for \(\bar i\).
+            </p>
+            <!--<p>
+                    When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+                    \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+                </p>-->
+            <section>
+                <h2 id="refl/refr">Reflection / Refraction</h2>
+            </section>
+            <section>
+            </section>
+        </main>
+        <footer>
+            <div class="container wrapper footer-grid">
+                <!--Need to find a way to hide the all the sources in one link, maybe a pop up>-->
+                <div>
+                    <ul>
+                        <li>
+                            <p>Sources</p>
+                        </li>
+                        <li>
+                            <p>Contact</p>
+                        </li>
+                        <li>
+                            <p>Creative Commons CC.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p><a href="#backToTop" class="button button-orange">Back to Top</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
