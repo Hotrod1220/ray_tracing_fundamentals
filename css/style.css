@@ -42,6 +42,14 @@ header .wrapper {
     align-items: center;
 }
 
+.feature {
+    background-image: url("../images/beetle.raytr.jpeg");
+    background-size: cover;
+    background-position: top;
+    min-height: 70vh;
+    display: flex;
+}
+
 .page-title {
     background-color: #E49334;
     padding: 10px 50px;
@@ -215,7 +223,7 @@ footer a:hover {
 }
 
 .popup {
-    margin: 150px auto;
+    margin: 100px auto;
     padding: 20px;
     background: black;
     border-radius: 5px;
