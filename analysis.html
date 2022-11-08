@@ -34,8 +34,8 @@
                 <h1>Analysis</h1>
             </div>
         </header>
-        <main>
-            <div class="blue-background">
+        <section class="stickyHeader" id="myHeader">
+            <div class="light-orange-background">
                 <div class="container wrapper">
                     <nav class="analysis-nav">
                         <ul>
@@ -46,77 +46,213 @@
                     </nav>
                 </div>
             </div>
+        </section>
+        <!--Code retreived from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sticky_header-->
+        <script>
+            window.onscroll = function () { myFunction() };
+
+            var stickyHeader = document.getElementById("myHeader");
+            var sticky = stickyHeader.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    stickyHeader.classList.add("sticky");
+                } else {
+                    stickyHeader.classList.remove("sticky");
+                }
+            }
+        </script>
+        <main class="content">
             <section>
-                <h2 id="raylines">Ray Lines</h2>
-                <img src="images/diagrams/vector.png" alt="Vector Equations of a Line">
-                <p class="caption">
-                    Diagram from <a href="https://www.cuemath.com/algebra/vector-equation/">Cuemath</a>.
-                </p>
-                <p>
-                    The vector representation of a line can be:
-                </p>
-                <p>
-                    \(λ \bar m\) + \(\bar s\) or \(λ \bar b\) + \(\bar a\)
-                </p>
-                <p>
-                    where \(\bar b\), \(\bar m\) and \(\bar a\), \(\bar s\) are commonly used interchangeably. <br>
-                    Where \(\bar s\) is the origin point of the ray, and \(\bar m\) is the angle of the ray.
-                    The \(λ\) parameter specifies the distances along the line. <br><br>
-                    Finding the origin of the ray, \(\bar s\), can be any light source chosen, or often used is the
-                    camera position.<br><br>
-                    The line's angle \(\bar m\) is the ratio of how each coordinate changes from different points on the
-                    line.<br><br>
-                    Manipulating some incredible formulas that can be found <a
-                        href="https://blog.scottlogic.com/2020/03/10/raytracer-how-to.html">here</a>.
-                    The equation for \(\bar m\) becomes:
-                </p>
-                <p>
-                    Equation
-                    <br><br>
-                    Now that both \(\bar m\) and \(\bar s\) have been found, any coordinates on the line can be
-                    calculated.
-                </p>
+                <div class="wrapper container">
+                    <div class="middle-grid">
+                        <div>
+                            <!--Just to skip first child in grid-->
+                        </div>
+                        <div>
+                            <h2 id="raylines" class="orange-color">Ray Lines</h2>
+                            <img src="images/diagrams/vector.png" alt="Vector Equations of a Line"
+                                class="white-background">
+                            <p class="caption">
+                                Diagram from <a href="https://www.cuemath.com/algebra/vector-equation/">Cuemath</a>.
+                            </p>
+                            <p>
+                                The vector representation of a line can be:
+                            </p>
+                            <p>
+                                \(λ \bar m\) + \(\bar s\) or \(λ \bar b\) + \(\bar a\)
+                            </p>
+                            <p>
+                                where \(\bar b\), \(\bar m\) and \(\bar a\), \(\bar s\) are commonly used
+                                interchangeably,
+                                \(\bar s\) is the origin point of the ray, and \(\bar m\) is the angle of the ray.
+                                The \(λ\) parameter specifies the distances along the line. <br><br>
+                                Finding the origin of the ray, \(\bar s\), can be any light source chosen, or often used
+                                is the
+                                camera position.<br><br>
+                                The line's angle \(\bar m\) is the ratio of how each coordinate changes from different
+                                points on the
+                                line.<br><br>
+                                Manipulating some incredible formulas that can be found <a
+                                    href="https://blog.scottlogic.com/2020/03/10/raytracer-how-to.html">here</a>.
+                                The equation for \(\bar m\) becomes:
+                            </p>
+                            <p>
+                                \(
+                                \bar m^{\theta_p}_{\theta_y}\) = \(rot_x ( rot_y (
+                                \begin{bmatrix}
+                                0.1(p_x - 2)\\
+                                0.1(p_y - 2)\\
+                                1
+                                \end{bmatrix}
+                                , \theta_y), \theta_p)
+                                \)
+                            </p>
+                            <p>
+                                Now that both \(\bar m\) and \(\bar s\) have been found, any coordinates on the line can
+                                be
+                                calculated.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <h2 id="intersection">Intersection</h2>
-            <p>
-                Now that coordinates on the ray lines can be found, we can find the intersection,
-                \(\bar i\), of a ray \(\bar r\) = \(λ \bar m\) + \(\bar s\) with a plane \(\bar p\) = {\(a, b, c, k\)}.
-                For
-                <a href="https://blog.scottlogic.com/2020/03/10/raytracer-how-to.html">more information</a> on planes,
-                and creating objects with planes.
-            </p>
-            <img src="images/diagrams/intersection.png" alt="Intersection of a ray line">
-            <p class="caption">
-                Diagram from <a href="https://blog.scottlogic.com/2020/03/10/raytracer-how-to.html">Scott Logic</a>.
-            </p>
-            <p>
-                Since \(\bar i\) is on both \(\bar r\) and \(\bar p\). It can be substituted directly into both
-                equations. This becomes
-            </p>
-            <p>
-                Equation
-                Equation
-            </p>
-            <p>
-                Combining the two equations above and isolating for \(λ\),
-                fascinating examples and steps shown <a
-                    href="https://blog.scottlogic.com/2020/03/10/raytracer-how-to.html">here</a>
-            </p>
-            <p>
-                EQUATION
-            </p>
-            <p>
-                \(λ\) can now be substituted into the original equation \(\bar i\) = \(λ \bar p\) + \(\bar s\) to
-                calculate for \(\bar i\).
-            </p>
-            <!--<p>
-                    When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-                    \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
-                </p>-->
-            <section>
-                <h2 id="refl/refr">Reflection / Refraction</h2>
+            <section class="blue-background">
+                <div class="wrapper container">
+                    <div class="middle-grid">
+                        <div>
+                            <!--Just to skip first child in grid-->
+                        </div>
+                        <div>
+                            <h2 id="intersection" class="orange-color">Intersection</h2>
+                            <p>
+                                Now that coordinates on the ray lines can be found, we can find the intersection,
+                                \(\bar i\), of a ray \(\bar r\) = \(λ \bar m\) + \(\bar s\) with a plane \(\bar p\) =
+                                {\(a, b, c,
+                                k\)}.
+                                For
+                                <a href="https://blog.scottlogic.com/2020/03/10/raytracer-how-to.html">more
+                                    information</a> on
+                                planes,
+                                and creating objects with planes.
+                            </p>
+                            <img src="images/diagrams/intersection.png" alt="Intersection of a ray line">
+                            <p class="caption">
+                                Diagram from <a
+                                    href="https://blog.scottlogic.com/2020/03/10/raytracer-how-to.html">Scott Logic</a>.
+                            </p>
+                            <p>
+                                Since \(\bar i\) is on both \(\bar r\) and \(\bar p\). It can be substituted directly
+                                into both
+                                equations. This becomes
+                            </p>
+                            <p>
+                                \( \bar i\) = \(
+                                \begin{bmatrix}
+                                λ \bar m_x + \bar s_x\\
+                                λ \bar m_y + \bar s_y\\
+                                λ \bar m_z + \bar s_z
+                                \end{bmatrix}
+                                \)
+                                <br><br>
+                                \(a * \bar i_x + b * \bar i_y + c * \bar i_z + k\) = \(0\)
+                            </p>
+                            <p>
+                                Combining the two equations above and isolating for \(λ\), examples and steps shown
+                                <a href="https://blog.scottlogic.com/2020/03/10/raytracer-how-to.html">here</a>
+                            </p>
+                            <p>
+                                \(λ\) = \(- {[a, b, c] * \bar s + k} \over {[a, b, c] * \bar m}\)
+                            </p>
+                            <p>
+                                \(λ\) can now be substituted into the original equation \(\bar i\) = \(λ \bar p\) +
+                                \(\bar s\) to
+                                calculate for \(\bar i\).
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section>
+                <div class="wrapper container">
+                    <div class="middle-grid">
+                        <div>
+                            <!--Just to skip first child in grid-->
+                        </div>
+                        <div>
+                            <h2 id="refl/refr" class="orange-color">Reflection / Refraction</h2>
+                            <h3>Reflection</h3>
+                            <p>
+                                Reflection is the simplest form of light-matter interaction. The most commonly used law
+                                is that the
+                                angle of incident,
+                                \(\theta_i\), is each to the angle of reflection, \(\theta_r\). They can be seen below.
+                            </p>
+                            <img src="images/diagrams/angleIncRlec.png" alt="Angle of Incident Diagram">
+                            <p class="caption">
+                                Diagram from <a href="https://byjus.com/physics/angle-of-incidence/">Byju's</a>
+                            </p>
+                            <p>
+                                Assuming the surface is normal (flat) and using the distance of the ray before
+                                intersection, \(I\),
+                                as previously calculated. We can use this alongside the vector that is perpendicular
+                                (right angle)
+                                to the surface, \(N\). After some math manipulation using the previous angles, the final
+                                equation is
+                                \(R = I - 2(N * 1)N\). Where \(R\) is the ray that is reflected. More information and
+                                steps can be
+                                found
+                                <a
+                                    href="https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/reflection-refraction-fresnel">here</a>.
+                            </p>
+                            <h3>Refraction</h3>
+                            <p>
+                                Refraction is when light is “bent” after contacting another transparent medium (air,
+                                glass, diamond,
+                                etc.).
+                                Every transparent medium has a different level of refraction, this is the reason why
+                                diamonds
+                                sparkle and water does not.
+                            </p>
+                            <img src="images/diagrams/refractionimg.png" alt="Refraction image">
+                            <p class="caption">
+                                Image from
+                                <a
+                                    href="https://www.dreamstime.com/refraction-example-vector-illustration-diagram-light-angle-change-other-substance-incident-refracted-ray-scheme-visual-image175189536">dreamstime</a>
+                            </p>
+                            <p>
+                                The amount of refraction for each surface is called the index of refraction, \(η\). The
+                                equation for
+                                it is
+                                \(η\) = \(c \over v\), where \(c\) is a constant for the speed of light, and \(v\) is
+                                the speed of
+                                light in this medium.<br><br>
+
+                                There is a list of predetermined values for many different mediums in our world. Using
+                                the index of
+                                refraction with
+                                the angle of incident and many equation manipulations found
+                                <a
+                                    href="https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/reflection-refraction-fresnel">here</a>.
+                                The equation for the ray of refraction, \(T\), is
+                            </p>
+                            <p>
+                                \(T = η(I + c_1 N) - Nc_2 \)<br><br>
+
+                                \(T = ηI + (η c_1 - c_2)N\)
+                            </p>
+                            <p>
+                                where \(c_1\) is the speed of light in the first medium, \(c_2\) is the speed of light
+                                in the second
+                                medium,
+                                and \(N\) is the perpendicular vector. <br><br>
+                                The rays can then continue throughout the scene reflecting and refracting until
+                                perceived by the
+                                camera or person.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <footer>
