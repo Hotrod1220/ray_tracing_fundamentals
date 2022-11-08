@@ -30,11 +30,6 @@ img {
     padding: 40px 50px;
 }
 
-.notop-wrapper {
-    padding: 40px 50px;
-    padding-top: 0px;
-}
-
 header {
     background-color: #20435C;
 }
@@ -54,7 +49,7 @@ header .wrapper {
 }
 
 .logo {
-    max-width: 400px;
+    width: 400px;
 }
 
 .primary-nav ul {
