@@ -34,35 +34,20 @@
                 <h1>Analysis</h1>
             </div>
         </header>
-        <section class="stickyHeader" id="myHeader">
-            <div class="light-orange-background">
-                <div class="container wrapper">
-                    <nav class="analysis-nav">
-                        <ul>
-                            <li><a href="#raylines">Raylines</a></li>
-                            <li><a href="#intersection">Intersection</a></li>
-                            <li><a href="#refl/refr">Reflection</a></li>
-                        </ul>
-                    </nav>
+        <main id="raylines">
+            <div class="stickyHeader">
+                <div class="orange-background-title">
+                    <div class="container wrapper">
+                        <nav class="analysis-nav">
+                            <ul>
+                                <li><a href="#raylines">Raylines</a></li>
+                                <li><a href="#intersection">Intersection</a></li>
+                                <li><a href="#refl/refr">Reflection</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
-        </section>
-        <!--Code retreived from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sticky_header-->
-        <script>
-            window.onscroll = function () { myFunction() };
-
-            var stickyHeader = document.getElementById("myHeader");
-            var sticky = stickyHeader.offsetTop;
-
-            function myFunction() {
-                if (window.pageYOffset > sticky) {
-                    stickyHeader.classList.add("sticky");
-                } else {
-                    stickyHeader.classList.remove("sticky");
-                }
-            }
-        </script>
-        <main class="content">
             <section>
                 <div class="wrapper container">
                     <div class="middle-grid">
@@ -70,7 +55,7 @@
                             <!--Just to skip first child in grid-->
                         </div>
                         <div>
-                            <h2 id="raylines" class="orange-color">Ray Lines</h2>
+                            <h2 class="orange-color">Ray Lines</h2>
                             <img src="images/diagrams/vector.png" alt="Vector Equations of a Line"
                                 class="white-background">
                             <p class="caption">
@@ -108,7 +93,7 @@
                                 , \theta_y), \theta_p)
                                 \)
                             </p>
-                            <p>
+                            <p id="intersection">
                                 Now that both \(\bar m\) and \(\bar s\) have been found, any coordinates on the line can
                                 be
                                 calculated.
@@ -124,7 +109,7 @@
                             <!--Just to skip first child in grid-->
                         </div>
                         <div>
-                            <h2 id="intersection" class="orange-color">Intersection</h2>
+                            <h2 class="orange-color">Intersection</h2>
                             <p>
                                 Now that coordinates on the ray lines can be found, we can find the intersection,
                                 \(\bar i\), of a ray \(\bar r\) = \(λ \bar m\) + \(\bar s\) with a plane \(\bar p\) =
@@ -164,7 +149,7 @@
                             <p>
                                 \(λ\) = \(- {[a, b, c] * \bar s + k} \over {[a, b, c] * \bar m}\)
                             </p>
-                            <p>
+                            <p id="refl/refr">
                                 \(λ\) can now be substituted into the original equation \(\bar i\) = \(λ \bar p\) +
                                 \(\bar s\) to
                                 calculate for \(\bar i\).
@@ -180,7 +165,7 @@
                             <!--Just to skip first child in grid-->
                         </div>
                         <div>
-                            <h2 id="refl/refr" class="orange-color">Reflection / Refraction</h2>
+                            <h2 class="orange-color">Reflection / Refraction</h2>
                             <h3>Reflection</h3>
                             <p>
                                 Reflection is the simplest form of light-matter interaction. The most commonly used law

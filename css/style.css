@@ -99,14 +99,10 @@ header .wrapper {
     color: black;
 }
 
-.sticky {
-    position: fixed;
+.stickyHeader {
+    position: sticky;
     top: 0;
-    width: 100%;
-}
-
-.sticky+.content {
-    padding-top: 102px;
+    z-index: 10;
 }
 
 /* How to make the video shrink vertically
@@ -116,8 +112,9 @@ when page shrinks */
     margin: auto;
 }
 
-.light-orange-background {
+.orange-background-title {
     background-color: #E49334;
+    margin-top: 10px;
 }
 
 .orange-background {
