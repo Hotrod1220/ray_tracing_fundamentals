@@ -149,7 +149,7 @@ when page shrinks */
 
 .title-parent-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
 }
 
@@ -322,4 +322,10 @@ a:hover {
 .caption {
     font-size: 16px;
     margin-top: 0px;
+}
+
+.caption-image {
+    font-size: 12px;
+    padding: 0px 50px;
+    margin-bottom: 0px;
 }
