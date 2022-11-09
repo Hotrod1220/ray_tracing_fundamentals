@@ -145,12 +145,24 @@ header .wrapper {
     background-color: #D1DDE9;
 }
 
+.orange-color {
+    color: #E49334;
+}
+
 .align-right {
     text-align: right;
 }
 
-.orange-color {
-    color: #E49334;
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.img-analysis {
+    object-fit:cover;
 }
 
 /* Grid properties */
