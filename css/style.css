@@ -108,11 +108,19 @@ header .wrapper {
     z-index: 1;
 }
 
-/* How to make the video shrink vertically
-when page shrinks */
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
 .video iframe {
-    max-width: 100%;
-    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 50px;
 }
 
 .orange-background-title {
@@ -148,6 +156,12 @@ when page shrinks */
 /* Grid properties */
 
 .title-parent-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+}
+
+.title-parent-grid2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
@@ -229,7 +243,6 @@ footer a:hover {
     border-radius: 5px;
     width: 75%;
     position: relative;
-    transition: all 5s ease-in-out;
 }
 
 .popup h2 {
@@ -243,7 +256,7 @@ footer a:hover {
 
 .popup .close {
     position: absolute;
-    top: 20px;
+    top: 40px;
     right: 30px;
     transition: all 200ms;
     font-size: 30px;
@@ -331,11 +344,61 @@ a:hover {
 }
 
 @media screen and (max-width: 1000px) {
+
+    .title-parent-grid,
+    .title-parent-grid2 {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .primary-nav ul li {
+        padding: 25px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid div:first-child {
+        text-align: center;
+    }
+
     .two-grid {
         grid-template-columns: 1fr;
     }
 
     .middle-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        /* Need to figure out spacing */
+    }
+
+    h2 {
+        /* Need to figure out spacing for "Reflection / Refraction"*/
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .analysis-nav ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .popupAn {
+        margin: 200px auto;
+        transition: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .align-right {
+        text-align: left;
     }
 }
