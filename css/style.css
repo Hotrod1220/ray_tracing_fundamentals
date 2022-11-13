@@ -162,7 +162,11 @@ header .wrapper {
 }
 
 .img-analysis {
-    object-fit:cover;
+    object-fit: cover;
+}
+
+.noHorScroll {
+    contain: paint;
 }
 
 /* Grid properties */
@@ -223,8 +227,55 @@ footer a:hover {
     flex-direction: column;
 }
 
+main {
+    flex-grow: 1;
+}
+
+/* Animation Properties */
+
+.initialRayAnimation {
+    position: absolute;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 100%;
+    animation-duration: 8s;
+    animation-name: raylineAni2;
+    animation-iteration-count: infinite;
+}
+
+.rayAnimation {
+    position: absolute;
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    animation-duration: 8s;
+    animation-name: raylineAni;
+    animation-iteration-count: infinite;
+}
+
+@keyframes raylineAni {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes raylineAni2 {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
 /* Overlay and popup code from
- */
+ https://codepen.io/imprakash/pen/GgNMXO */
 .overlay {
     position: fixed;
     top: 0;
@@ -235,6 +286,7 @@ footer a:hover {
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+    z-index: 2;
 }
 
 .overlay:target {
@@ -282,10 +334,6 @@ footer a:hover {
 
 .popup .content a {
     text-decoration: underline;
-}
-
-main {
-    flex-grow: 1;
 }
 
 /* Buttons */
