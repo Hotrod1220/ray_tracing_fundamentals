@@ -135,9 +135,21 @@
                             <img src="images/after_rayTr.jpeg" width="1500" height="900">
                         </div>
                     </div>
+                    <p class="caption align-left design-caption">
+                        Images from <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA</a>.
+                    </p>
                 </div>
                 <script>
+                    //Code from https://stackoverflow.com/questions/5489946/how-to-wait-for-the-end-of-resize-event-and-only-then-perform-an-action
                     initComparisons();
+                    function resizedw() {
+                        window.location.reload();
+                    }
+                    var doit;
+                    window.onresize = function () {
+                        clearTimeout(doit);
+                        doit = setTimeout(resizedw, 100);
+                    };
                 </script>
             </section>
             <section>

@@ -1,6 +1,3 @@
-/* font-family: 'Overpass', sans-serif;
-font-family: 'Quicksand', sans-serif; */
-
 * {
     box-sizing: border-box;
 }
@@ -169,6 +166,10 @@ header .wrapper {
     contain: paint;
 }
 
+.design-caption{
+    margin: 0;
+}
+
 /* Grid properties */
 
 .title-parent-grid {
@@ -280,6 +281,8 @@ Code from https://www.w3schools.com/howto/howto_js_image_comparison.asp */
     position: relative;
     height: 900px;
     /*should be the same height as the images*/
+    padding-bottom: 56.25%;
+    height: 0;
 }
 
 .img-comp-img {
