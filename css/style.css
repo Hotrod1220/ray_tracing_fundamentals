@@ -53,10 +53,6 @@ header .wrapper {
     color: #20435C;
 }
 
-.logo {
-    width: 400px;
-}
-
 .primary-nav ul {
     list-style-type: none;
     margin: 0;
@@ -166,7 +162,7 @@ header .wrapper {
     contain: paint;
 }
 
-.design-caption{
+.design-caption {
     margin: 0;
 }
 
@@ -479,5 +475,65 @@ a:hover {
 @media screen and (max-width: 550px) {
     .align-right {
         text-align: left;
+    }
+
+    .wrapper {
+        padding: 40px 20px;
+    }
+
+    header .wrapper {
+        padding: 0px 20px;
+    }
+
+    .popup {
+        margin: 0px auto;
+    }
+
+    .primary-nav ul li a {
+        font-size: 25px;
+    }
+
+    .primary-nav ul {
+        column-gap: 20px;
+    }
+
+    .page-title {
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .wrapper {
+        padding: 40px 10px;
+    }
+
+    .title-parent-grid {
+        padding: 40px 5px;
+    }
+
+    .popup h2 {
+        margin: 0px;
+        font-size: 25px;
+    }
+
+    .popup h3 {
+        margin-top: 5px;
+        font-size: 20px;
+    }
+
+    .popup p {
+        font-size: 16px;
     }
 }
